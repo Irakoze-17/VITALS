@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Dashboard - CareBridge</title>
+    <style>
+        /* ---------------- Body ---------------- */
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #a8edea, #fed6e3);
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 { text-align: center; color: #444; }
+
+        /* ---------------- Cards ---------------- */
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            margin-bottom: 25px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h3 { margin-top: 0; }
+
+        /* ---------------- Forms ---------------- */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        input[type="text"], input[type="date"], input[type="time"] {
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 12px;
+            border: 1px solid #ddd;
+            width: 100%;
+        }
+
+        input[type="range"] {
+            width: 80%;
+            margin-top: 10px;
+        }
+
+        output {
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        /* ---------------- Slider Color Classes ---------------- */
+        .low { color: red; }
+        .medium-low { color: orange; }
+        .medium { color: #FFD700; } /* gold */
+        .medium-high { color: #32CD32; } /* light green */
+        .high { color: #1E90FF; } /* blue */
+
+        /* ---------------- Buttons ---------------- */
+        button {
+            background: linear-gradient(135deg, #ff8fab, #ffb3c6);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px rgba(255, 143, 171, 0.4);
+        }
+
+        /* ---------------- Tables ---------------- */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th {
+            background-color: #ff8fab;
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        td {
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .placeholder {
+            font-style: italic;
+            color: #777;
+        }
+
+        /* ---------------- Logout ---------------- */
+        .logout {
+            display: block;
+            width: fit-content;
+            margin: 20px auto;
+            padding: 10px 20px;
+            text-align: center;
+            background: #ff6b81;
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: bold;
+        }
+
+        .logout:hover {
+            background: #ff4f6d;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Welcome, Joie Claire 👋</h2>
+
+    <!-- ---------------- Happiness Form ---------------- -->
+    <div class="card">
+        <h3>Submit Your Happiness (%)</h3>
+
+        <form>
+            <input type="range" min="0" max="100" value="50" id="happinessSlider">
+            <output id="scoreOutput">50</output> %
+
+            <div class="form-group">
+                <input type="text" placeholder="Optional comment">
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- ---------------- Happiness History ---------------- -->
+    <div class="card">
+        <h3>Your Happiness History</h3>
+
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Score</th>
+                <th>Status</th>
+                <th>Comment</th>
+            </tr>
+            <tr>
+                <td colspan="4" class="placeholder">No happiness records yet</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- ---------------- Booking Section ---------------- -->
+    <div class="card">
+        <h3>Book a One-on-One Session</h3>
+
+        <form>
+            <div class="form-group">
+                Date:<br>
+                <input type="date">
+            </div>
+
+            <div class="form-group">
+                Time:<br>
+                <input type="time">
+            </div>
+
+            <div class="form-group">
+                <input type="text" placeholder="Reason for session">
+            </div>
+
+            <button type="submit">Book</button>
+        </form>
+
+        <h4>Your Appointments</h4>
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <td colspan="3" class="placeholder">No appointments yet</td>
+            </tr>
+        </table>
+    </div>
+
+    <a href="#" class="logout">Logout</a>
+
+    <!-- ---------------- Slider Color Script ---------------- -->
+    <script>
+        const slider = document.getElementById('happinessSlider');
+        const output = document.getElementById('scoreOutput');
+
+        function updateColor(value) {
+            let colorClass = '';
+            if (value <= 20) colorClass = 'low';
+            else if (value <= 40) colorClass = 'medium-low';
+            else if (value <= 60) colorClass = 'medium';
+            else if (value <= 80) colorClass = 'medium-high';
+            else colorClass = 'high';
+
+            output.className = colorClass;
+            output.textContent = value;
+        }
+
+        slider.addEventListener('input', () => updateColor(slider.value));
+
+        // Initialize color
+        updateColor(slider.value);
+    </script>
+
+</body>
+</html>

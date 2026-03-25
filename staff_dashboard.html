@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Staff Dashboard - CareBridge</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #a8edea, #fed6e3);
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 { text-align: center; color: #444; }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            margin-bottom: 25px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th {
+            background-color: #ff8fab;
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        td {
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .placeholder {
+            font-style: italic;
+            color: #777;
+        }
+
+        button {
+            background: linear-gradient(135deg, #ff8fab, #ffb3c6);
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            margin: 2px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px rgba(255, 143, 171, 0.4);
+        }
+
+        .logout {
+            display: block;
+            width: fit-content;
+            margin: 20px auto;
+            padding: 10px 20px;
+            text-align: center;
+            background: #ff6b81;
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: bold;
+        }
+
+        .logout:hover {
+            background: #ff4f6d;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h2>Welcome, Staff Member 👩‍🏫</h2>
+
+    <!-- ---------------- Alerts ---------------- -->
+    <div class="card">
+        <h3>Alerts</h3>
+        <table>
+            <tr>
+                <th>Student</th>
+                <th>Happiness Score</th>
+                <th>Temperature</th>
+                <th>Action Required</th>
+            </tr>
+            <tr>
+                <td colspan="4" class="placeholder">No alerts yet</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- ---------------- Student Happiness Records ---------------- -->
+    <div class="card">
+        <h3>All Student Happiness Records</h3>
+        <table>
+            <tr>
+                <th>Student</th>
+                <th>Date</th>
+                <th>Score</th>
+                <th>Status</th>
+                <th>Comment</th>
+            </tr>
+            <tr>
+                <td colspan="5" class="placeholder">No records yet</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- ---------------- Appointments ---------------- -->
+    <div class="card">
+        <h3>Manage Appointments</h3>
+        <table>
+            <tr>
+                <th>Student</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Reason</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+            <tr>
+                <td colspan="6" class="placeholder">No appointments yet</td>
+            </tr>
+        </table>
+    </div>
+
+    <a href="#" class="logout">Logout</a>
+
+</body>
+</html>

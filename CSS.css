@@ -1,4 +1,3 @@
-/* ---------------- General Page ---------------- */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #a8edea, #fed6e3);
@@ -8,8 +7,6 @@ body {
     align-items: center;
     margin: 0;
 }
-
-/* ---------------- Login Card ---------------- */
 .login-container {
     background: white;
     padding: 40px;
@@ -23,8 +20,6 @@ body {
     margin-bottom: 20px;
     color: #444;
 }
-
-/* ---------------- Input Fields ---------------- */
 .login-container input[type="text"],
 .login-container input[type="password"] {
     width: 100%;
@@ -41,8 +36,6 @@ body {
     border-color: #ff8fab;
     box-shadow: 0 0 8px rgba(255, 143, 171, 0.4);
 }
-
-/* ---------------- Button ---------------- */
 .login-container button {
     width: 100%;
     padding: 12px;
@@ -61,8 +54,6 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 8px 15px rgba(255, 143, 171, 0.4);
 }
-
-/* ---------------- Small Footer Text ---------------- */
 .login-footer {
     margin-top: 15px;
     font-size: 12px;

@@ -3,7 +3,6 @@
 <head>
     <title>Student Dashboard - CareBridge</title>
     <style>
-        /* ---------------- Body ---------------- */
         body {
             font-family: 'Segoe UI', sans-serif;
             background: linear-gradient(135deg, #a8edea, #fed6e3);
@@ -13,7 +12,6 @@
 
         h2 { text-align: center; color: #444; }
 
-        /* ---------------- Cards ---------------- */
         .card {
             background: white;
             padding: 20px;
@@ -27,7 +25,6 @@
 
         h3 { margin-top: 0; }
 
-        /* ---------------- Forms ---------------- */
         .form-group {
             margin-bottom: 15px;
         }
@@ -50,32 +47,12 @@
             margin-left: 10px;
         }
 
-        /* ---------------- Slider Color Classes ---------------- */
         .low { color: red; }
         .medium-low { color: orange; }
-        .medium { color: #FFD700; } /* gold */
-        .medium-high { color: #32CD32; } /* light green */
-        .high { color: #1E90FF; } /* blue */
+        .medium { color: #FFD700; } 
+        .medium-high { color: #32CD32; } 
+        .high { color: #1E90FF; }
 
-        /* ---------------- Buttons ---------------- */
-        button {
-            background: linear-gradient(135deg, #ff8fab, #ffb3c6);
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 12px;
-            cursor: pointer;
-            margin-top: 10px;
-            font-weight: bold;
-            transition: 0.3s ease;
-        }
-
-        button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 15px rgba(255, 143, 171, 0.4);
-        }
-
-        /* ---------------- Tables ---------------- */
         table {
             width: 100%;
             border-collapse: collapse;
@@ -100,7 +77,6 @@
             color: #777;
         }
 
-        /* ---------------- Logout ---------------- */
         .logout {
             display: block;
             width: fit-content;
@@ -123,7 +99,6 @@
 
     <h2>Welcome, Joie Claire 👋</h2>
 
-    <!-- ---------------- Happiness Form ---------------- -->
     <div class="card">
         <h3>Submit Your Happiness (%)</h3>
 
@@ -138,8 +113,6 @@
             <button type="submit">Submit</button>
         </form>
     </div>
-
-    <!-- ---------------- Happiness History ---------------- -->
     <div class="card">
         <h3>Your Happiness History</h3>
 
@@ -156,7 +129,6 @@
         </table>
     </div>
 
-    <!-- ---------------- Booking Section ---------------- -->
     <div class="card">
         <h3>Book a One-on-One Session</h3>
 
@@ -192,8 +164,6 @@
     </div>
 
     <a href="#" class="logout">Logout</a>
-
-    <!-- ---------------- Slider Color Script ---------------- -->
     <script>
         const slider = document.getElementById('happinessSlider');
         const output = document.getElementById('scoreOutput');
